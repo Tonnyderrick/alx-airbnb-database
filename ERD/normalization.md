@@ -4,7 +4,7 @@
 
 Ensure the Airbnb database schema adheres to the Third Normal Form (3NF) to reduce redundancy and improve data integrity.
 
----
+
 
 ## First Normal Form (1NF)
 
@@ -17,9 +17,8 @@ Ensure the Airbnb database schema adheres to the Third Normal Form (3NF) to redu
   - `User.phone_number` is atomic.
   - `Property.amenities` moved to a separate join table to avoid multi-values.
 
-✅ **Passes 1NF**
+**Passes 1NF**
 
----
 
 ## Second Normal Form (2NF)
 
@@ -29,9 +28,9 @@ Ensure the Airbnb database schema adheres to the Third Normal Form (3NF) to redu
 - Tables like `Booking` and `Payment` have composite relations but all attributes depend on their respective full keys.
 - Join tables like `Property_Amenity` use composite primary keys.
 
-✅ **Passes 2NF**
+**Passes 2NF**
 
----
+
 
 ## Third Normal Form (3NF)
 
@@ -44,9 +43,9 @@ Ensure the Airbnb database schema adheres to the Third Normal Form (3NF) to redu
   - `Property` table: `owner_id` is a FK, no redundant host details stored here
   - `Booking` has no embedded `User` or `Property` data — only foreign keys
 
-✅ **Passes 3NF**
+**Passes 3NF**
 
----
+
 
 ## Summary of Adjustments Made
 
@@ -54,7 +53,7 @@ Ensure the Airbnb database schema adheres to the Third Normal Form (3NF) to redu
 - Ensured all foreign key relationships (e.g., `Booking.user_id`, `Property.owner_id`) are stored by reference rather than duplicating user/property info.
 - Removed any repeating groups or nested data structures.
 
----
+
 
 ## Result
 
