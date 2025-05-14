@@ -34,3 +34,20 @@ This query uses a subquery to find all `property_id`s from the `reviews` table w
 
 ### 2. Correlated Subquery: Users with More Than 3 Bookings
 This query uses a correlated subquery inside the `WHERE` clause. It checks for each user how many bookings they've made. If the count is greater than 3, that user is included in the result.
+
+# Aggregations and Window Functions
+
+This section contains SQL queries that demonstrate the use of aggregation and window functions to analyze data.
+
+## Files
+
+- `aggregations_and_window_functions.sql`: SQL queries using COUNT, GROUP BY, and window functions.
+- `README.md`: Explanation of the queries.
+
+## Queries
+
+### 1. Aggregation: Total Bookings Per User
+This query calculates the total number of bookings each user has made using `COUNT()` and `GROUP BY`. It uses a `LEFT JOIN` to ensure users with 0 bookings are included.
+
+### 2. Window Function: Rank Properties by Total Bookings
+This query ranks all properties based on how many bookings they have received. It uses the `RANK()` window function over the booking count, grouped by property.
