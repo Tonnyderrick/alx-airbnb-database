@@ -51,3 +51,6 @@ This query calculates the total number of bookings each user has made using `COU
 
 ### 2. Window Function: Rank Properties by Total Bookings
 This query ranks all properties based on how many bookings they have received. It uses the `RANK()` window function over the booking count, grouped by property.
+
+### 2. Window Function: Rank Properties by Total Bookings (Using ROW_NUMBER)
+This query uses a subquery to count bookings per property and applies `ROW_NUMBER()` to assign a unique rank based on the number of bookings (descending). Useful for uniquely ranking properties even if some have the same count.
