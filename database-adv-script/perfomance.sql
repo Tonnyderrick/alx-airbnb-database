@@ -1,4 +1,4 @@
--- Initial complex query for retrieving all bookings with user, property, and payment details
+-- Initial query for retrieving bookings with user, property, and payment details
 SELECT
     b.id AS booking_id,
     b.start_date,
